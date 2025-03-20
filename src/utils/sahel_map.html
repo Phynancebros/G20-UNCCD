@@ -1,0 +1,3344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Map</title>
+</head>
+<body>
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "0bd878166b2e44b8887f0009b568ccda": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "width": "500px"
+      }
+    },
+    "3cc2f1576d254c9884e256da077498f7": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "880px",
+        "width": "100%"
+      }
+    },
+    "0061c7e2a95f48e38c5ff7afea967b61": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {}
+    },
+    "e649075936ec4eb29a179905ba88ff1a": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "cursor": "move"
+      }
+    },
+    "a92671c43c7f45be9183b2d9b9a8fd8d": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+        "base": true,
+        "max_zoom": 30,
+        "min_zoom": 1,
+        "name": "OpenStreetMap.Mapnik",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": [],
+        "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }
+    },
+    "accdafb841bf45678d7f1d0fe2b7807b": {
+      "model_name": "LeafletMapStyleModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {}
+    },
+    "330bd602051c45fc9f7652478e097dff": {
+      "model_name": "LeafletMapModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "_dom_classes": [],
+        "center": [
+          19.5,
+          19.5
+        ],
+        "controls": [
+          "IPY_MODEL_7608f0b1b46b43bd9b93ebc067982954",
+          "IPY_MODEL_777d0aed00de41b1838a521f133c2a6d",
+          "IPY_MODEL_f940340ffac14ed7bace35d8f2760ba4",
+          "IPY_MODEL_0b43981471744b8eb2b7a36449c232a4",
+          "IPY_MODEL_2d140fe5480644218ae5d742e6df4e3f",
+          "IPY_MODEL_95a5e2136ffe42e7b8882d3d573dfa07",
+          "IPY_MODEL_24940e5e8f2f498ab8b9fa8afa8eb2c8",
+          "IPY_MODEL_ce80d68c8e7b475ea83a2f2c7d9a86d2",
+          "IPY_MODEL_9777c7e40df0481f8533f6ccaa79d81b"
+        ],
+        "crs": {
+          "name": "EPSG3857",
+          "custom": false
+        },
+        "default_style": "IPY_MODEL_0061c7e2a95f48e38c5ff7afea967b61",
+        "dragging_style": "IPY_MODEL_e649075936ec4eb29a179905ba88ff1a",
+        "layers": [
+          "IPY_MODEL_a92671c43c7f45be9183b2d9b9a8fd8d",
+          "IPY_MODEL_f8638c199dcd4f0cab8c48e6e48c8180",
+          "IPY_MODEL_028728b8599c4551933070d94cf34b18",
+          "IPY_MODEL_0140b1849b0b46b6b62ec0ceb6b5a2a0"
+        ],
+        "layout": "IPY_MODEL_3cc2f1576d254c9884e256da077498f7",
+        "max_zoom": 24.0,
+        "options": [
+          "bounce_at_zoom_limits",
+          "box_zoom",
+          "center",
+          "close_popup_on_click",
+          "double_click_zoom",
+          "dragging",
+          "fullscreen",
+          "inertia",
+          "inertia_deceleration",
+          "inertia_max_speed",
+          "interpolation",
+          "keyboard",
+          "keyboard_pan_offset",
+          "keyboard_zoom_offset",
+          "max_zoom",
+          "min_zoom",
+          "prefer_canvas",
+          "scroll_wheel_zoom",
+          "tap",
+          "tap_tolerance",
+          "touch_zoom",
+          "world_copy_jump",
+          "zoom",
+          "zoom_animation_threshold",
+          "zoom_delta",
+          "zoom_snap"
+        ],
+        "panes": {},
+        "scroll_wheel_zoom": true,
+        "style": "IPY_MODEL_accdafb841bf45678d7f1d0fe2b7807b",
+        "zoom": 6.0
+      }
+    },
+    "7c2ea6a3523a4dca9d3f3be0cbe9cc5b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "28px",
+        "padding": "0px 0px 0px 4px",
+        "width": "28px"
+      }
+    },
+    "4d96b350088e421ebcd21b5e638be456": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "34be1c977d2b468da1943b5341d8e163": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "globe",
+        "layout": "IPY_MODEL_7c2ea6a3523a4dca9d3f3be0cbe9cc5b",
+        "style": "IPY_MODEL_4d96b350088e421ebcd21b5e638be456",
+        "tooltip": "Search location/data"
+      }
+    },
+    "5fc3598ef236419abc775b77d15005ce": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "07b296c8332a459da82f6666f3a38ffc": {
+      "model_name": "ToggleButtonsStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "button_width": "110px"
+      }
+    },
+    "63e364b1c7e948c89684da78e61ca1fa": {
+      "model_name": "ToggleButtonsModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "_options_labels": [
+          "name/address",
+          "lat-lon",
+          "data"
+        ],
+        "icons": [],
+        "index": 0,
+        "layout": "IPY_MODEL_5fc3598ef236419abc775b77d15005ce",
+        "style": "IPY_MODEL_07b296c8332a459da82f6666f3a38ffc",
+        "tooltips": [
+          "Search by place name or address",
+          "Search by lat-lon coordinates",
+          "Search Earth Engine data catalog"
+        ]
+      }
+    },
+    "223cc6089d6e46baadc50f5c4eb3d63f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "width": "340px"
+      }
+    },
+    "1b375097a0844d18aa0de50ba17f2b7e": {
+      "model_name": "TextStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "71754a1d25e146019025c82317dd0a8b": {
+      "model_name": "TextModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_223cc6089d6e46baadc50f5c4eb3d63f",
+        "placeholder": "Search by place name or address",
+        "style": "IPY_MODEL_1b375097a0844d18aa0de50ba17f2b7e",
+        "tooltip": "Search location"
+      }
+    },
+    "9c34c783d50e45f28588c11aa90398b2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "max_height": "350px",
+        "max_width": "340px",
+        "overflow": "scroll"
+      }
+    },
+    "d69914ced50a471e852798b9bd29fd4f": {
+      "model_name": "OutputModel",
+      "model_module": "@jupyter-widgets/output",
+      "model_module_version": "1.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_9c34c783d50e45f28588c11aa90398b2",
+        "outputs": []
+      }
+    },
+    "35ce1fad825b41bf899623025d10fdd0": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5334accacb7048b09ed2ed8d24c9e4db": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "6d8711d66c594a2d820f293cea460e09": {
+      "model_name": "RadioButtonsModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "_options_labels": [],
+        "layout": "IPY_MODEL_35ce1fad825b41bf899623025d10fdd0",
+        "style": "IPY_MODEL_5334accacb7048b09ed2ed8d24c9e4db"
+      }
+    },
+    "23e67331e6f74adaae5805a1334843d9": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "max_width": "279px",
+        "min_width": "279px"
+      }
+    },
+    "e0bd2e5e9e404392bb659a2f1423b8bc": {
+      "model_name": "DescriptionStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "85b9563ab9554acdafc6b3bdae5a376d": {
+      "model_name": "DropdownModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "_options_labels": [],
+        "layout": "IPY_MODEL_23e67331e6f74adaae5805a1334843d9",
+        "style": "IPY_MODEL_e0bd2e5e9e404392bb659a2f1423b8bc"
+      }
+    },
+    "ef07034faa9d4527af0f853a25143d1e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "max_width": "57px",
+        "min_width": "57px"
+      }
+    },
+    "3c88b53f368e4ba5937bca4c28222c35": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ce1e7a6fdf6d42c5b1e0ac41070e3783": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "description": "import",
+        "layout": "IPY_MODEL_ef07034faa9d4527af0f853a25143d1e",
+        "style": "IPY_MODEL_3c88b53f368e4ba5937bca4c28222c35",
+        "tooltip": "Click to import the selected asset"
+      }
+    },
+    "7c8d421ee77f47d7b4e8dc227d8835e6": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "c7682cf26e9e45459445841fec5eeebd": {
+      "model_name": "HTMLStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "979385b2b6b04ae68e682c952f25498d": {
+      "model_name": "HTMLModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_7c8d421ee77f47d7b4e8dc227d8835e6",
+        "style": "IPY_MODEL_c7682cf26e9e45459445841fec5eeebd"
+      }
+    },
+    "2579c2c9ff424fcbb2fafb3222bda24e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "831f7bb58f2e4a9fa51e1b327686a8d5": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_ce1e7a6fdf6d42c5b1e0ac41070e3783",
+          "IPY_MODEL_85b9563ab9554acdafc6b3bdae5a376d"
+        ],
+        "layout": "IPY_MODEL_2579c2c9ff424fcbb2fafb3222bda24e"
+      }
+    },
+    "c67aa6f336a44cfb8f55478ec20a9121": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "572763a6f45347929e4729e7f09647f4": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_63e364b1c7e948c89684da78e61ca1fa",
+          "IPY_MODEL_71754a1d25e146019025c82317dd0a8b"
+        ],
+        "layout": "IPY_MODEL_c67aa6f336a44cfb8f55478ec20a9121"
+      }
+    },
+    "5b7dce8982b04b55b5745a38e947ac5f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "4c43c114ec054ebd9016ff4068f2feeb": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "children": [
+          "IPY_MODEL_34be1c977d2b468da1943b5341d8e163"
+        ],
+        "layout": "IPY_MODEL_5b7dce8982b04b55b5745a38e947ac5f"
+      }
+    },
+    "ed606a694ad64801ae5e166263cf6dc3": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_4c43c114ec054ebd9016ff4068f2feeb",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "7608f0b1b46b43bd9b93ebc067982954": {
+      "model_name": "LeafletWidgetControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "options": [
+          "position",
+          "transparent_bg"
+        ],
+        "widget": "IPY_MODEL_4c43c114ec054ebd9016ff4068f2feeb"
+      }
+    },
+    "777d0aed00de41b1838a521f133c2a6d": {
+      "model_name": "LeafletZoomControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "options": [
+          "position",
+          "zoom_in_text",
+          "zoom_in_title",
+          "zoom_out_text",
+          "zoom_out_title"
+        ]
+      }
+    },
+    "f940340ffac14ed7bace35d8f2760ba4": {
+      "model_name": "LeafletFullScreenControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "options": [
+          "position"
+        ]
+      }
+    },
+    "0b43981471744b8eb2b7a36449c232a4": {
+      "model_name": "LeafletDrawControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "circle": {},
+        "circlemarker": {},
+        "data": [],
+        "marker": {
+          "shapeOptions": {
+            "color": "#3388ff"
+          }
+        },
+        "options": [
+          "position"
+        ],
+        "polygon": {
+          "shapeOptions": {}
+        },
+        "polyline": {
+          "shapeOptions": {}
+        },
+        "rectangle": {
+          "shapeOptions": {
+            "color": "#3388ff"
+          }
+        }
+      }
+    },
+    "2d140fe5480644218ae5d742e6df4e3f": {
+      "model_name": "LeafletScaleControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "options": [
+          "imperial",
+          "max_width",
+          "metric",
+          "position",
+          "update_when_idle"
+        ],
+        "position": "bottomleft"
+      }
+    },
+    "95a5e2136ffe42e7b8882d3d573dfa07": {
+      "model_name": "LeafletMeasureControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "_custom_units": {},
+        "active_color": "orange",
+        "options": [
+          "active_color",
+          "capture_z_index",
+          "completed_color",
+          "popup_options",
+          "position",
+          "primary_area_unit",
+          "primary_length_unit",
+          "secondary_area_unit",
+          "secondary_length_unit"
+        ],
+        "popup_options": {
+          "className": "leaflet-measure-resultpopup",
+          "autoPanPadding": [
+            10,
+            10
+          ]
+        },
+        "position": "bottomleft",
+        "primary_length_unit": "kilometers"
+      }
+    },
+    "2544e2a3dce84eb7a3dba39950803647": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "f85adc3043b946568b198658cbb17b2a": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a2008bc457d0452d8e941a4e5bb65366": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "info",
+        "layout": "IPY_MODEL_2544e2a3dce84eb7a3dba39950803647",
+        "style": "IPY_MODEL_f85adc3043b946568b198658cbb17b2a",
+        "tooltip": "Inspector"
+      }
+    },
+    "74ab72fd59b74bef94442a3de2b11c5a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "3ee9ea7c205d43deb03e0dac870b20cb": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2b11988b8dfe431ba389132780971006": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "bar-chart",
+        "layout": "IPY_MODEL_74ab72fd59b74bef94442a3de2b11c5a",
+        "style": "IPY_MODEL_3ee9ea7c205d43deb03e0dac870b20cb",
+        "tooltip": "Plotting"
+      }
+    },
+    "024a02f5194c4e9bb99a1c527d0f83e4": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "7e5c5481a7e94664840a4468a788ba9e": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ba9aeb4c79e14ba485bc2be0675cb49e": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "globe",
+        "layout": "IPY_MODEL_024a02f5194c4e9bb99a1c527d0f83e4",
+        "style": "IPY_MODEL_7e5c5481a7e94664840a4468a788ba9e",
+        "tooltip": "Create timelapse"
+      }
+    },
+    "ed25c6c24dca40148747ebbe9e9a3f3e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "73f66c5bcb044406bddf1e738c93de1c": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ca8ca7bb51564ff5bbb9f9d1d604822a": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "map",
+        "layout": "IPY_MODEL_ed25c6c24dca40148747ebbe9e9a3f3e",
+        "style": "IPY_MODEL_73f66c5bcb044406bddf1e738c93de1c",
+        "tooltip": "Change basemap"
+      }
+    },
+    "72ba8673a8ec408da994d1210a3a9383": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "43df5bb9f2f34749a6fa0a58068f06ba": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "6b3452444a334b9e8844f1e38133ba3c": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "retweet",
+        "layout": "IPY_MODEL_72ba8673a8ec408da994d1210a3a9383",
+        "style": "IPY_MODEL_43df5bb9f2f34749a6fa0a58068f06ba",
+        "tooltip": "Convert Earth Engine JavaScript to Python"
+      }
+    },
+    "e5f49a5735ea43e1a2bb23ac4f959978": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "81285e4f912f4a70a671dd2a660f7931": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7e3e69c3fbc8493d9c89cf0856b5669b": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "plus",
+        "layout": "IPY_MODEL_e5f49a5735ea43e1a2bb23ac4f959978",
+        "style": "IPY_MODEL_81285e4f912f4a70a671dd2a660f7931",
+        "tooltip": "Expand toolbar"
+      }
+    },
+    "1a3df71a8db94662832950f1baafa53e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "1546447649bc4e4ba1100ddc063d925f": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "13d1f938116e4d30828e89b8041b15d2": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "eraser",
+        "layout": "IPY_MODEL_1a3df71a8db94662832950f1baafa53e",
+        "style": "IPY_MODEL_1546447649bc4e4ba1100ddc063d925f",
+        "tooltip": "Remove all drawn features"
+      }
+    },
+    "45485fbfb6504eb7a54c49b1e789e027": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "c966845f5d0a4dc7b7d9a207d2ddce87": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "abb339715f334431a219c2f9f6d123b7": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "folder-open",
+        "layout": "IPY_MODEL_45485fbfb6504eb7a54c49b1e789e027",
+        "style": "IPY_MODEL_c966845f5d0a4dc7b7d9a207d2ddce87",
+        "tooltip": "Open local vector/raster data"
+      }
+    },
+    "e1f359f9647348c99e64c8270f3fd73a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "7f1de3fedfb14db984ab5ba58193aab2": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f83ef3be6e8c44299fb887048ec7523f": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "gears",
+        "layout": "IPY_MODEL_e1f359f9647348c99e64c8270f3fd73a",
+        "style": "IPY_MODEL_7f1de3fedfb14db984ab5ba58193aab2",
+        "tooltip": "WhiteboxTools for local geoprocessing"
+      }
+    },
+    "ee2f98da89ba4909bf7a267d1d12b2a2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "6ecd619c52bc43a59fe146139c1c9d38": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "abf824edd177466cbed9a571fa7e5774": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "google",
+        "layout": "IPY_MODEL_ee2f98da89ba4909bf7a267d1d12b2a2",
+        "style": "IPY_MODEL_6ecd619c52bc43a59fe146139c1c9d38",
+        "tooltip": "GEE Toolbox for cloud computing"
+      }
+    },
+    "d67eb580e90445edaa6de1a58782d073": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "0a2841f2c5fe4d0e88269caf838b962c": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0e3fe9a81b104285a18ba933124bcf51": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "fast-forward",
+        "layout": "IPY_MODEL_d67eb580e90445edaa6de1a58782d073",
+        "style": "IPY_MODEL_0a2841f2c5fe4d0e88269caf838b962c",
+        "tooltip": "Activate timeslider"
+      }
+    },
+    "0ddeeace07f0463a869925b28de0d9a8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "8b353aaaf559497ab5979cb023f405cf": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "4dda225054b0424b93f719a349f73073": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "hand-o-up",
+        "layout": "IPY_MODEL_0ddeeace07f0463a869925b28de0d9a8",
+        "style": "IPY_MODEL_8b353aaaf559497ab5979cb023f405cf",
+        "tooltip": "Collect training samples"
+      }
+    },
+    "21ca41e6183145788e829f81d857ae63": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "4e4db6c87c9c4e26a64307ae06ee5759": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "348e61f5cb294add8204bab0d95216a5": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "line-chart",
+        "layout": "IPY_MODEL_21ca41e6183145788e829f81d857ae63",
+        "style": "IPY_MODEL_4e4db6c87c9c4e26a64307ae06ee5759",
+        "tooltip": "Creating and plotting transects"
+      }
+    },
+    "8c014eb3021a48248c25d423fc085fa2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "8690f887d61c4f86911f5d9336766c9b": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "fe92391aef964e59b39b875f2eec9112": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "random",
+        "layout": "IPY_MODEL_8c014eb3021a48248c25d423fc085fa2",
+        "style": "IPY_MODEL_8690f887d61c4f86911f5d9336766c9b",
+        "tooltip": "Sankey plots"
+      }
+    },
+    "d1e6222b6fe74f5a91354d1c8449c31f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "2b10f0a0e75e4e618acf9d21f7a0802a": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "71d4c25a349a41249c2b56ed4ff33aa2": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "adjust",
+        "layout": "IPY_MODEL_d1e6222b6fe74f5a91354d1c8449c31f",
+        "style": "IPY_MODEL_2b10f0a0e75e4e618acf9d21f7a0802a",
+        "tooltip": "Planet imagery"
+      }
+    },
+    "98886997c8b0421998a85e55383bdf55": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "5745a5c48dbb4e98b5134cc54eb7009e": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "9ce2961d21d142639ad690b850f9e18f": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "info-circle",
+        "layout": "IPY_MODEL_98886997c8b0421998a85e55383bdf55",
+        "style": "IPY_MODEL_5745a5c48dbb4e98b5134cc54eb7009e",
+        "tooltip": "Get COG/STAC pixel value"
+      }
+    },
+    "83c47e4777cc427290c34bbeb68db6a0": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "auto",
+        "padding": "0px 0px 0px 4px",
+        "width": "auto"
+      }
+    },
+    "963bf0b42d6b4d66bf2c8b2e4550bf96": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d5d5d91913564bf8a3437190daa05d36": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "question",
+        "layout": "IPY_MODEL_83c47e4777cc427290c34bbeb68db6a0",
+        "style": "IPY_MODEL_963bf0b42d6b4d66bf2c8b2e4550bf96",
+        "tooltip": "Get help"
+      }
+    },
+    "04c3562fda894f3eb7ac7709dc68ef54": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "grid_gap": "1px 1px",
+        "grid_template_columns": "32px 32px 32px ",
+        "grid_template_rows": "32px 32px ",
+        "padding": "5px",
+        "width": "109px"
+      }
+    },
+    "890d0f8019504739949028c984e40012": {
+      "model_name": "GridBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_a2008bc457d0452d8e941a4e5bb65366",
+          "IPY_MODEL_2b11988b8dfe431ba389132780971006",
+          "IPY_MODEL_ba9aeb4c79e14ba485bc2be0675cb49e",
+          "IPY_MODEL_ca8ca7bb51564ff5bbb9f9d1d604822a",
+          "IPY_MODEL_6b3452444a334b9e8844f1e38133ba3c",
+          "IPY_MODEL_7e3e69c3fbc8493d9c89cf0856b5669b"
+        ],
+        "layout": "IPY_MODEL_04c3562fda894f3eb7ac7709dc68ef54"
+      }
+    },
+    "e488cd6c2f594039b1d902ab05766bed": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "28px",
+        "padding": "0px 0px 0px 4px",
+        "width": "28px"
+      }
+    },
+    "918087ce1db343bc9e12697b63ba8e09": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "cdd159eaa009439698f1a09b0010013c": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "wrench",
+        "layout": "IPY_MODEL_e488cd6c2f594039b1d902ab05766bed",
+        "style": "IPY_MODEL_918087ce1db343bc9e12697b63ba8e09",
+        "tooltip": "Toolbar"
+      }
+    },
+    "aff703ba3b5d42e69b62b96dc93af902": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "28px",
+        "width": "72px"
+      }
+    },
+    "e72626a5b339452aa9bdd040080385c4": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d108494b365d4080b5d9f2bb3cb89abd": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "server",
+        "layout": "IPY_MODEL_aff703ba3b5d42e69b62b96dc93af902",
+        "style": "IPY_MODEL_e72626a5b339452aa9bdd040080385c4",
+        "tooltip": "Layers",
+        "value": true
+      }
+    },
+    "7fb65128b0f84956ad1ffacff1b50e89": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "align_items": "center",
+        "display": "flex",
+        "justify_content": "flex-end"
+      }
+    },
+    "9e7f4c0dcd9e485c8315f0f47219de9d": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_d108494b365d4080b5d9f2bb3cb89abd",
+          "IPY_MODEL_cdd159eaa009439698f1a09b0010013c"
+        ],
+        "layout": "IPY_MODEL_7fb65128b0f84956ad1ffacff1b50e89"
+      }
+    },
+    "74a0c99f7a1f4808a91c093c31cf86c4": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "00dc1d47bdce4a17b63d2e4bc2504826": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_3f0a1e27f69842948f6fc1703111671b"
+        ],
+        "layout": "IPY_MODEL_74a0c99f7a1f4808a91c093c31cf86c4"
+      }
+    },
+    "02815476fd214161b11e25e1adf49ce3": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1f60f39d87804f14861fefd95f5a5529": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "children": [
+          "IPY_MODEL_9e7f4c0dcd9e485c8315f0f47219de9d",
+          "IPY_MODEL_00dc1d47bdce4a17b63d2e4bc2504826"
+        ],
+        "layout": "IPY_MODEL_02815476fd214161b11e25e1adf49ce3"
+      }
+    },
+    "24940e5e8f2f498ab8b9fa8afa8eb2c8": {
+      "model_name": "LeafletWidgetControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "options": [
+          "position",
+          "transparent_bg"
+        ],
+        "position": "topright",
+        "widget": "IPY_MODEL_1f60f39d87804f14861fefd95f5a5529"
+      }
+    },
+    "985a77d483784acebb2339111ed5d995": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "28px",
+        "padding": "0px 0px 0px 4px",
+        "width": "28px"
+      }
+    },
+    "d66caac33476423284c3b96597a31e55": {
+      "model_name": "ToggleButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "6446b820c97c422bb1bc09f6d5a708c5": {
+      "model_name": "ToggleButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "server",
+        "layout": "IPY_MODEL_985a77d483784acebb2339111ed5d995",
+        "style": "IPY_MODEL_d66caac33476423284c3b96597a31e55",
+        "tooltip": "Layer Manager",
+        "value": true
+      }
+    },
+    "134206220ab2444fb430befe8a0d2b0a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "28px",
+        "padding": "0px",
+        "width": "28px"
+      }
+    },
+    "b8d5f58812f546b09e73a932d7c80852": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "16176ce547a94bb5a849bbed030bc333": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "button_style": "primary",
+        "icon": "times",
+        "layout": "IPY_MODEL_134206220ab2444fb430befe8a0d2b0a",
+        "style": "IPY_MODEL_b8d5f58812f546b09e73a932d7c80852",
+        "tooltip": "Close the tool"
+      }
+    },
+    "47cadbb958a247dca1a16778306a1606": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "display": "none"
+      }
+    },
+    "1e1c1ede6e2642ec91a3cf7128f1d359": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_16176ce547a94bb5a849bbed030bc333",
+          "IPY_MODEL_6446b820c97c422bb1bc09f6d5a708c5"
+        ],
+        "layout": "IPY_MODEL_47cadbb958a247dca1a16778306a1606"
+      }
+    },
+    "23fe3bd3a6ff40eaad54962a1bf10cfd": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "3b069f698974430e8b2d080496ed1b63": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_799f679e9cdb40628caab434bfbbe401",
+          "IPY_MODEL_77e3a9a6072946e7a38b60cf78cafaa6",
+          "IPY_MODEL_4a3bc2f1f8a649d1b6c4fa445eec7d81",
+          "IPY_MODEL_d7a90704d15a4cbc80a9e78924ab4736",
+          "IPY_MODEL_81bb825f05dd48caac42a88473da71ba"
+        ],
+        "layout": "IPY_MODEL_23fe3bd3a6ff40eaad54962a1bf10cfd"
+      }
+    },
+    "cb3fc38c357e4d6f955b7cd8c23cae91": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "padding": "0px 4px 25px 4px",
+        "width": "30ex"
+      }
+    },
+    "56d5dfe9feda48afbe6c67e2310cc330": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "4a02b86f36e64b2084fccec217427044": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "All layers on/off",
+        "indent": false,
+        "layout": "IPY_MODEL_cb3fc38c357e4d6f955b7cd8c23cae91",
+        "style": "IPY_MODEL_56d5dfe9feda48afbe6c67e2310cc330"
+      }
+    },
+    "c1db3e1f8c16495daa73bb087402db7b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "f3d51fd7e58847a8ad0aed50cbf24164": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "907ecd744157475db4064645cf6db22f": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "OpenStreetMap.Mapnik",
+        "indent": false,
+        "layout": "IPY_MODEL_c1db3e1f8c16495daa73bb087402db7b",
+        "style": "IPY_MODEL_f3d51fd7e58847a8ad0aed50cbf24164",
+        "value": true
+      }
+    },
+    "f97393aa6d2a4c99aa7300ddfe63e84c": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "30f68270ed084d918337ed838480d4a8": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "41038815c16d48a68204f305d72d1e10": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_f97393aa6d2a4c99aa7300ddfe63e84c",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_30f68270ed084d918337ed838480d4a8",
+        "value": 1.0
+      }
+    },
+    "68817dc5d9b24a20b411d174a5e2ee85": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "918a3feea5cf4afdacf4ec2a970251f1": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a03bc060ecfc4d2398e960267196dec1": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_68817dc5d9b24a20b411d174a5e2ee85",
+        "style": "IPY_MODEL_918a3feea5cf4afdacf4ec2a970251f1",
+        "tooltip": "OpenStreetMap.Mapnik"
+      }
+    },
+    "7678addca917468a95c6c9b8bfbd8213": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "7ad129151d8e4c949be446cee2330c89": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5b2625b509684b799a996d7779404952": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_7678addca917468a95c6c9b8bfbd8213",
+        "style": "IPY_MODEL_7ad129151d8e4c949be446cee2330c89",
+        "tooltip": "Loaded"
+      }
+    },
+    "b018460755bb4852a48fb49fca1a9f5b": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_5b2625b509684b799a996d7779404952",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "c7d3c2459b2042d18551a10eefc901e1": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "d86fa73e9f20434196cb1aea6207f772": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_907ecd744157475db4064645cf6db22f",
+          "IPY_MODEL_41038815c16d48a68204f305d72d1e10",
+          "IPY_MODEL_a03bc060ecfc4d2398e960267196dec1",
+          "IPY_MODEL_5b2625b509684b799a996d7779404952"
+        ],
+        "layout": "IPY_MODEL_c7d3c2459b2042d18551a10eefc901e1"
+      }
+    },
+    "93c67c3f59dd44f6857790315469a5a9": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "3f0a1e27f69842948f6fc1703111671b": {
+      "model_name": "VBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [
+          "geemap-light"
+        ],
+        "children": [
+          "IPY_MODEL_1e1c1ede6e2642ec91a3cf7128f1d359",
+          "IPY_MODEL_3b069f698974430e8b2d080496ed1b63"
+        ],
+        "layout": "IPY_MODEL_93c67c3f59dd44f6857790315469a5a9"
+      }
+    },
+    "ce80d68c8e7b475ea83a2f2c7d9a86d2": {
+      "model_name": "LeafletAttributionControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "options": [
+          "position",
+          "prefix"
+        ],
+        "position": "bottomright"
+      }
+    },
+    "f8638c199dcd4f0cab8c48e6e48c8180": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "attribution": "Google Earth Engine",
+        "max_zoom": 24,
+        "name": "EVI 2022",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": [],
+        "url": "https://earthengine.googleapis.com/v1/projects/g20-hackaton/maps/03b2c7384db18363966cbb537dbbbcf1-e055a9144147e08db9d67c42d03d8288/tiles/{z}/{x}/{y}"
+      }
+    },
+    "bd6e8a89eddd47e4a1caede781e41f5e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "padding": "0px 4px 25px 4px",
+        "width": "30ex"
+      }
+    },
+    "b811b501ff02492b8eb77eb7e68ad610": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "81dcc890bd3e4b3bb4881e973d71d159": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "All layers on/off",
+        "indent": false,
+        "layout": "IPY_MODEL_bd6e8a89eddd47e4a1caede781e41f5e",
+        "style": "IPY_MODEL_b811b501ff02492b8eb77eb7e68ad610"
+      }
+    },
+    "c2d96ac79fcb4ce290401e787ef126c6": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "30e29603113042c79e0700a54a6b6b48": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f6fa20aebc3543d6a0515247b94f5bc2": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "OpenStreetMap.Mapnik",
+        "indent": false,
+        "layout": "IPY_MODEL_c2d96ac79fcb4ce290401e787ef126c6",
+        "style": "IPY_MODEL_30e29603113042c79e0700a54a6b6b48",
+        "value": true
+      }
+    },
+    "d1a8a4ded0c342e782cd006044ebcd67": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "71a0abc7ce4c4bf2b99a4544b0fb66ee": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "bb86cc664b3448a2bca7950607382355": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_d1a8a4ded0c342e782cd006044ebcd67",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_71a0abc7ce4c4bf2b99a4544b0fb66ee",
+        "value": 1.0
+      }
+    },
+    "a942be84f28b404cad33b9f5bc2b7340": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "e523c08f63ec4813b3d2fa0305364a4e": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "0a985fdfa1fb459db1d9da9f8b16ad2f": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_a942be84f28b404cad33b9f5bc2b7340",
+        "style": "IPY_MODEL_e523c08f63ec4813b3d2fa0305364a4e",
+        "tooltip": "OpenStreetMap.Mapnik"
+      }
+    },
+    "ee26b4fb340449bba0df1c03657c8cff": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "bc6d01abf8814e1b8becb1bef63c0bd9": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "86bc2ad1748e4cd891307d2f8d1fcb4a": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_ee26b4fb340449bba0df1c03657c8cff",
+        "style": "IPY_MODEL_bc6d01abf8814e1b8becb1bef63c0bd9",
+        "tooltip": "Loaded"
+      }
+    },
+    "1d2b1e210b3245d4b8bf2c635e47aea0": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_86bc2ad1748e4cd891307d2f8d1fcb4a",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "3304f225ca4441e9bed9b4357363f338": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "4b1a560b74d3490b8f489560ccb44834": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_f6fa20aebc3543d6a0515247b94f5bc2",
+          "IPY_MODEL_bb86cc664b3448a2bca7950607382355",
+          "IPY_MODEL_0a985fdfa1fb459db1d9da9f8b16ad2f",
+          "IPY_MODEL_86bc2ad1748e4cd891307d2f8d1fcb4a"
+        ],
+        "layout": "IPY_MODEL_3304f225ca4441e9bed9b4357363f338"
+      }
+    },
+    "d7af00d7951041bab21acf49994bfcf8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "c1467708b50948c7a913fc3feb33e185": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "197eac6440704f39939d7f786c4e25c5": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "EVI 2022",
+        "indent": false,
+        "layout": "IPY_MODEL_d7af00d7951041bab21acf49994bfcf8",
+        "style": "IPY_MODEL_c1467708b50948c7a913fc3feb33e185",
+        "value": true
+      }
+    },
+    "627cbfa8a72d4d2ab966af50938f740c": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "5c017bd9fbae4a42b689414fec266a9a": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "217861cde1444461a16c6704e3813c27": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_627cbfa8a72d4d2ab966af50938f740c",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_5c017bd9fbae4a42b689414fec266a9a",
+        "value": 1.0
+      }
+    },
+    "55d082b471d144b59b1fba7223c6e269": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "8b2012e7782044a1b95d5718fc9b0057": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "5fa0a13f4f8647c5964a8449dfd76ba1": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_55d082b471d144b59b1fba7223c6e269",
+        "style": "IPY_MODEL_8b2012e7782044a1b95d5718fc9b0057",
+        "tooltip": "EVI 2022"
+      }
+    },
+    "fa951bf8477e43e08143c0a097e0026b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "6913411dcc52494f83d7015645dbc472": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "7cb17ba1c2d544838eb10555e736e8a3": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_fa951bf8477e43e08143c0a097e0026b",
+        "style": "IPY_MODEL_6913411dcc52494f83d7015645dbc472",
+        "tooltip": "Loaded"
+      }
+    },
+    "e69213840cf8417eaa5c22d025cc19ab": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_7cb17ba1c2d544838eb10555e736e8a3",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "2a6cc149939b476ab74b4bb6257f7bcf": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "cb642573d2ab46ee9ff58ccad345dad6": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_197eac6440704f39939d7f786c4e25c5",
+          "IPY_MODEL_217861cde1444461a16c6704e3813c27",
+          "IPY_MODEL_5fa0a13f4f8647c5964a8449dfd76ba1",
+          "IPY_MODEL_7cb17ba1c2d544838eb10555e736e8a3"
+        ],
+        "layout": "IPY_MODEL_2a6cc149939b476ab74b4bb6257f7bcf"
+      }
+    },
+    "028728b8599c4551933070d94cf34b18": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "attribution": "Google Earth Engine",
+        "max_zoom": 24,
+        "name": "LAI 2022",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": [],
+        "url": "https://earthengine.googleapis.com/v1/projects/g20-hackaton/maps/e21bb67a647069a4a194ff80bc32bc4d-167d4ad65f850925a23ab6031071b9da/tiles/{z}/{x}/{y}"
+      }
+    },
+    "419e4eec65104e73845ebcde5e70097f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "padding": "0px 4px 25px 4px",
+        "width": "30ex"
+      }
+    },
+    "937a42016a1144a09d993a7d54da6dec": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "be4bb18f016d4c8ea5e9b2f194647744": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "All layers on/off",
+        "indent": false,
+        "layout": "IPY_MODEL_419e4eec65104e73845ebcde5e70097f",
+        "style": "IPY_MODEL_937a42016a1144a09d993a7d54da6dec"
+      }
+    },
+    "405f6860e8c64d14bd4071f177a2c492": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "af343959e6be42a2ad81be8207f6fb99": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "90c90a15baab4e7598de5a50a98bf040": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "OpenStreetMap.Mapnik",
+        "indent": false,
+        "layout": "IPY_MODEL_405f6860e8c64d14bd4071f177a2c492",
+        "style": "IPY_MODEL_af343959e6be42a2ad81be8207f6fb99",
+        "value": true
+      }
+    },
+    "fa43a1e518404d249be1d5dca9e39a2e": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "6db571fadb3c4b55b28717553ec3a491": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "10005b2eb1654544b436972606aaa8ff": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_fa43a1e518404d249be1d5dca9e39a2e",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_6db571fadb3c4b55b28717553ec3a491",
+        "value": 1.0
+      }
+    },
+    "f6c9d907417e41dba16abfe5733a4395": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "45b9c4c67df84a4fa68868066eeb2c3b": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "24b751adf881431a927d11cd0df0f7a5": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_f6c9d907417e41dba16abfe5733a4395",
+        "style": "IPY_MODEL_45b9c4c67df84a4fa68868066eeb2c3b",
+        "tooltip": "OpenStreetMap.Mapnik"
+      }
+    },
+    "605b6afa8b07434ba7404247a20b75d2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "8eb28bd14d2845d6a2726878da1fdd59": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b07bf37d6e634db9bbb4ac6ef92febb5": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_605b6afa8b07434ba7404247a20b75d2",
+        "style": "IPY_MODEL_8eb28bd14d2845d6a2726878da1fdd59",
+        "tooltip": "Loaded"
+      }
+    },
+    "06c9a0ee7ea145e9884c381cae2fa0a5": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_b07bf37d6e634db9bbb4ac6ef92febb5",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "f01f25739a8247bd8eb605043b008238": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "3bd015acfaa64d8fa63da692df903454": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_90c90a15baab4e7598de5a50a98bf040",
+          "IPY_MODEL_10005b2eb1654544b436972606aaa8ff",
+          "IPY_MODEL_24b751adf881431a927d11cd0df0f7a5",
+          "IPY_MODEL_b07bf37d6e634db9bbb4ac6ef92febb5"
+        ],
+        "layout": "IPY_MODEL_f01f25739a8247bd8eb605043b008238"
+      }
+    },
+    "347498c3b9e9430ca730ebd32a0e0663": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "11650103279141c39677c6e5ef2ae15c": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "8105d1e533134d8595da227d67505297": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "EVI 2022",
+        "indent": false,
+        "layout": "IPY_MODEL_347498c3b9e9430ca730ebd32a0e0663",
+        "style": "IPY_MODEL_11650103279141c39677c6e5ef2ae15c",
+        "value": true
+      }
+    },
+    "cec50b4c86c84978800cd37a45812e61": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "d6ad0bfeb30f45df9895bc15aa907950": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "cbc5181a0a7846a6bc1c6661882ee926": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_cec50b4c86c84978800cd37a45812e61",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_d6ad0bfeb30f45df9895bc15aa907950",
+        "value": 1.0
+      }
+    },
+    "50ca45126d6647b29a280754dde473c7": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "8f5edf6680364aeb84e45245004749b1": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b6387f7f44c44aa88efffaeac7ffede3": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_50ca45126d6647b29a280754dde473c7",
+        "style": "IPY_MODEL_8f5edf6680364aeb84e45245004749b1",
+        "tooltip": "EVI 2022"
+      }
+    },
+    "525659185e504f65b81ee18d51474f66": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "31c138e283844c77980b0111a77d828a": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "eb7194901d2b4e8dacc4a0ab5acc7f98": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_525659185e504f65b81ee18d51474f66",
+        "style": "IPY_MODEL_31c138e283844c77980b0111a77d828a",
+        "tooltip": "Loaded"
+      }
+    },
+    "5fc781f1d18d4e828616750611608fe5": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_eb7194901d2b4e8dacc4a0ab5acc7f98",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "27ead38637d749768e235f53875579d2": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "dde967d057234bd49f4e8c36c461d173": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_8105d1e533134d8595da227d67505297",
+          "IPY_MODEL_cbc5181a0a7846a6bc1c6661882ee926",
+          "IPY_MODEL_b6387f7f44c44aa88efffaeac7ffede3",
+          "IPY_MODEL_eb7194901d2b4e8dacc4a0ab5acc7f98"
+        ],
+        "layout": "IPY_MODEL_27ead38637d749768e235f53875579d2"
+      }
+    },
+    "7c43675b432a4fd3b6b65c3661c74367": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "e72cdd23c3ae48ac936b7aad276bfa1f": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "29ae45f75eaa44d3910bddb377213f2a": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "LAI 2022",
+        "indent": false,
+        "layout": "IPY_MODEL_7c43675b432a4fd3b6b65c3661c74367",
+        "style": "IPY_MODEL_e72cdd23c3ae48ac936b7aad276bfa1f",
+        "value": true
+      }
+    },
+    "4de1ddf2157744f7913a6664dc62b9e3": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "74067588fabc49e48b8d9d95f50fd996": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "aecfe180d464479c937d46c57058126a": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_4de1ddf2157744f7913a6664dc62b9e3",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_74067588fabc49e48b8d9d95f50fd996",
+        "value": 1.0
+      }
+    },
+    "e4392355a962439dbc3863ff51fc15fc": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "2850ff9a2f314e44bef11df90f452d91": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "85702ac20ba045a884a5a90dcda16aaa": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_e4392355a962439dbc3863ff51fc15fc",
+        "style": "IPY_MODEL_2850ff9a2f314e44bef11df90f452d91",
+        "tooltip": "LAI 2022"
+      }
+    },
+    "6a05ba105b314a1aba7f93d1fb82e8c8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "569e720422774c86a07c14603076c9c1": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "b336ed14b01748ba93d731ca1ec64aa3": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_6a05ba105b314a1aba7f93d1fb82e8c8",
+        "style": "IPY_MODEL_569e720422774c86a07c14603076c9c1",
+        "tooltip": "Loaded"
+      }
+    },
+    "b08c7ba1a68e4821b91d15fd20415c18": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_b336ed14b01748ba93d731ca1ec64aa3",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "7c2a4b82bfc343af9de9b45024f70f9f": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "f1a167796032445d8c36d3fce69da949": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_29ae45f75eaa44d3910bddb377213f2a",
+          "IPY_MODEL_aecfe180d464479c937d46c57058126a",
+          "IPY_MODEL_85702ac20ba045a884a5a90dcda16aaa",
+          "IPY_MODEL_b336ed14b01748ba93d731ca1ec64aa3"
+        ],
+        "layout": "IPY_MODEL_7c2a4b82bfc343af9de9b45024f70f9f"
+      }
+    },
+    "0140b1849b0b46b6b62ec0ceb6b5a2a0": {
+      "model_name": "LeafletTileLayerModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "attribution": "Google Earth Engine",
+        "max_zoom": 24,
+        "name": "Precipitation 2022",
+        "options": [
+          "attribution",
+          "bounds",
+          "detect_retina",
+          "max_native_zoom",
+          "max_zoom",
+          "min_native_zoom",
+          "min_zoom",
+          "no_wrap",
+          "tile_size",
+          "tms",
+          "zoom_offset"
+        ],
+        "subitems": [],
+        "url": "https://earthengine.googleapis.com/v1/projects/g20-hackaton/maps/42f403549a2345cfe196663581ec3a42-b98df2db1bca08f64c328746add08a86/tiles/{z}/{x}/{y}"
+      }
+    },
+    "d9da694d60874df88d7e6ba8de3876c8": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "padding": "0px 4px 25px 4px",
+        "width": "30ex"
+      }
+    },
+    "cd60de601478469ebe1259c413886fc4": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "799f679e9cdb40628caab434bfbbe401": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "All layers on/off",
+        "indent": false,
+        "layout": "IPY_MODEL_d9da694d60874df88d7e6ba8de3876c8",
+        "style": "IPY_MODEL_cd60de601478469ebe1259c413886fc4"
+      }
+    },
+    "9012d969c8f44e78ac57f0e877cfb55b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "35718f264103409f887b939dd4d29ac7": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f7669635527a4926af9c36df7176f034": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "OpenStreetMap.Mapnik",
+        "indent": false,
+        "layout": "IPY_MODEL_9012d969c8f44e78ac57f0e877cfb55b",
+        "style": "IPY_MODEL_35718f264103409f887b939dd4d29ac7",
+        "value": true
+      }
+    },
+    "ff1152cc00b149c2b2e46b94ff045b4b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "d969efe0482d469eb698014323c2c800": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ac864250d8804966be8578e3cbb51742": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_ff1152cc00b149c2b2e46b94ff045b4b",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_d969efe0482d469eb698014323c2c800",
+        "value": 1.0
+      }
+    },
+    "2757b3a9a94a400ebe3445367ae26f00": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "108ea9c9e8f340979bc6ef6ec7559460": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "2e88a7c5a0bd4e07b8d2a53b644b8fa9": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_2757b3a9a94a400ebe3445367ae26f00",
+        "style": "IPY_MODEL_108ea9c9e8f340979bc6ef6ec7559460",
+        "tooltip": "OpenStreetMap.Mapnik"
+      }
+    },
+    "3f1cae26d28246558b06ccc3c8f1661a": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "ae0b144ccaa0439d920253b9968891fd": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "79c00e7d8cd4445599527301b2585fc5": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_3f1cae26d28246558b06ccc3c8f1661a",
+        "style": "IPY_MODEL_ae0b144ccaa0439d920253b9968891fd",
+        "tooltip": "Loaded"
+      }
+    },
+    "80b42db210c84d559c0ec719e8244a5b": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_79c00e7d8cd4445599527301b2585fc5",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "63761877f5ae4d1780d90398733130b1": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "77e3a9a6072946e7a38b60cf78cafaa6": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_f7669635527a4926af9c36df7176f034",
+          "IPY_MODEL_ac864250d8804966be8578e3cbb51742",
+          "IPY_MODEL_2e88a7c5a0bd4e07b8d2a53b644b8fa9",
+          "IPY_MODEL_79c00e7d8cd4445599527301b2585fc5"
+        ],
+        "layout": "IPY_MODEL_63761877f5ae4d1780d90398733130b1"
+      }
+    },
+    "67d68ff7929944f09155f7f68c774609": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "71258cfca2d6412bbc2e1a55633f7a4d": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "d01a2a1b32cb424a9e0b05ec806f7e09": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "EVI 2022",
+        "indent": false,
+        "layout": "IPY_MODEL_67d68ff7929944f09155f7f68c774609",
+        "style": "IPY_MODEL_71258cfca2d6412bbc2e1a55633f7a4d",
+        "value": true
+      }
+    },
+    "f3790aea6020455e9cf43ddd88f48277": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "a8ac528fd9fb4424a9ad32b30a7e0b7f": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "23190a3c6d0a4f82ae4bff7450d5d03d": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_f3790aea6020455e9cf43ddd88f48277",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_a8ac528fd9fb4424a9ad32b30a7e0b7f",
+        "value": 1.0
+      }
+    },
+    "ccc525bbcc554faebb2ca2c0ac15442c": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "addadd1cd19849389626c713bfd8102d": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1e0452175a0a4cb48b559e9b310948a2": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_ccc525bbcc554faebb2ca2c0ac15442c",
+        "style": "IPY_MODEL_addadd1cd19849389626c713bfd8102d",
+        "tooltip": "EVI 2022"
+      }
+    },
+    "01108ba6a1eb4ee2834d1d44745aece5": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "e20ed277517c42c0be8a8db356c58861": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "a949817898094aeaa9db91a79c3574a5": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_01108ba6a1eb4ee2834d1d44745aece5",
+        "style": "IPY_MODEL_e20ed277517c42c0be8a8db356c58861",
+        "tooltip": "Loaded"
+      }
+    },
+    "2ae6f4a6d91f47978c8f208092331a2f": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_a949817898094aeaa9db91a79c3574a5",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "4bce28ab2e664d65a4399bbd29a86948": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "4a3bc2f1f8a649d1b6c4fa445eec7d81": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_d01a2a1b32cb424a9e0b05ec806f7e09",
+          "IPY_MODEL_23190a3c6d0a4f82ae4bff7450d5d03d",
+          "IPY_MODEL_1e0452175a0a4cb48b559e9b310948a2",
+          "IPY_MODEL_a949817898094aeaa9db91a79c3574a5"
+        ],
+        "layout": "IPY_MODEL_4bce28ab2e664d65a4399bbd29a86948"
+      }
+    },
+    "999418b4765b4a768c5639019ce0873b": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "788d9d5ab3f94e63b10c4041c66e3cf0": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f3afb82094864bcea98ac1b4a8034a6d": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "LAI 2022",
+        "indent": false,
+        "layout": "IPY_MODEL_999418b4765b4a768c5639019ce0873b",
+        "style": "IPY_MODEL_788d9d5ab3f94e63b10c4041c66e3cf0",
+        "value": true
+      }
+    },
+    "46ea4e1adda842a59391fd5476465ecf": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "90c16698fe554cdf914e30066bba5af1": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "67d447747cf24e2e9cb9de8a23da74d1": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_46ea4e1adda842a59391fd5476465ecf",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_90c16698fe554cdf914e30066bba5af1",
+        "value": 1.0
+      }
+    },
+    "a2dc23eef4cd4c1b97f0ce45e5de46d0": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "00e402784dc54f51878232742e140015": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "e83fddcd22c2435f83459d3d5a79ce70": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_a2dc23eef4cd4c1b97f0ce45e5de46d0",
+        "style": "IPY_MODEL_00e402784dc54f51878232742e140015",
+        "tooltip": "LAI 2022"
+      }
+    },
+    "fc57f92b820b47e894f4ffd05559f4cf": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "655aea77ee994ed4907d838957b4aef1": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "862c4dc4d3bd447f8f2ac38f2b8b0941": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_fc57f92b820b47e894f4ffd05559f4cf",
+        "style": "IPY_MODEL_655aea77ee994ed4907d838957b4aef1",
+        "tooltip": "Loaded"
+      }
+    },
+    "5079f594051f45cc951cb584cdc8124e": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_862c4dc4d3bd447f8f2ac38f2b8b0941",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "0ec5e244624c47a88eab026152557cbd": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "d7a90704d15a4cbc80a9e78924ab4736": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_f3afb82094864bcea98ac1b4a8034a6d",
+          "IPY_MODEL_67d447747cf24e2e9cb9de8a23da74d1",
+          "IPY_MODEL_e83fddcd22c2435f83459d3d5a79ce70",
+          "IPY_MODEL_862c4dc4d3bd447f8f2ac38f2b8b0941"
+        ],
+        "layout": "IPY_MODEL_0ec5e244624c47a88eab026152557cbd"
+      }
+    },
+    "bf5af94d4edc4d9a90b4b499be565cd1": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "18px",
+        "width": "140px"
+      }
+    },
+    "1741fa0b7fb34daea917b4ae46772666": {
+      "model_name": "CheckboxStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "f4c7657502554b7c98d20d82bb440bd7": {
+      "model_name": "CheckboxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "description": "Precipitation 2022",
+        "indent": false,
+        "layout": "IPY_MODEL_bf5af94d4edc4d9a90b4b499be565cd1",
+        "style": "IPY_MODEL_1741fa0b7fb34daea917b4ae46772666",
+        "value": true
+      }
+    },
+    "8a75800d21be4855af91822c9e85ea29": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 3px 0px 0px",
+        "width": "70px"
+      }
+    },
+    "09348097e0804ff9913cbbb02211cf88": {
+      "model_name": "SliderStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "83aa2d0572a24f1ba0a27215ac6d2189": {
+      "model_name": "FloatSliderModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "layout": "IPY_MODEL_8a75800d21be4855af91822c9e85ea29",
+        "max": 1.0,
+        "readout": false,
+        "step": 0.01,
+        "style": "IPY_MODEL_09348097e0804ff9913cbbb02211cf88",
+        "value": 1.0
+      }
+    },
+    "d27f2e46df2d4bffaf9c407b935fc944": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "442b9372b4924a09b2bf10e19abb7539": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "1399d27bf9d3445e956fb0eb400ba0a5": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "gear",
+        "layout": "IPY_MODEL_d27f2e46df2d4bffaf9c407b935fc944",
+        "style": "IPY_MODEL_442b9372b4924a09b2bf10e19abb7539",
+        "tooltip": "Precipitation 2022"
+      }
+    },
+    "d862d670bc914d77b92131b21a91c8dc": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "25px",
+        "padding": "0px",
+        "width": "25px"
+      }
+    },
+    "1f25d1d55df047dc8ed67b0b357b7275": {
+      "model_name": "ButtonStyleModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {}
+    },
+    "ccab6ba76b714115a877077f56ab71b8": {
+      "model_name": "ButtonModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "icon": "times",
+        "layout": "IPY_MODEL_d862d670bc914d77b92131b21a91c8dc",
+        "style": "IPY_MODEL_1f25d1d55df047dc8ed67b0b357b7275",
+        "tooltip": "Loaded"
+      }
+    },
+    "c5d7a830b43c4c9ab804ce83a598e939": {
+      "model_name": "EventModel",
+      "model_module": "ipyevents",
+      "model_module_version": "2.0.2",
+      "state": {
+        "_supported_key_events": [
+          "keydown",
+          "keyup"
+        ],
+        "_supported_mouse_events": [
+          "click",
+          "auxclick",
+          "dblclick",
+          "mouseenter",
+          "mouseleave",
+          "mousedown",
+          "mouseup",
+          "mousemove",
+          "wheel",
+          "contextmenu",
+          "dragstart",
+          "drag",
+          "dragend",
+          "dragenter",
+          "dragover",
+          "dragleave",
+          "drop"
+        ],
+        "_supported_touch_events": [
+          "touchstart",
+          "touchend",
+          "touchmove",
+          "touchcancel"
+        ],
+        "source": "IPY_MODEL_ccab6ba76b714115a877077f56ab71b8",
+        "watched_events": [
+          "mouseenter",
+          "mouseleave"
+        ],
+        "xy": []
+      }
+    },
+    "af8f669b47c949d18d5a45e503efe297": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "padding": "0px 4px 0px 4px"
+      }
+    },
+    "81bb825f05dd48caac42a88473da71ba": {
+      "model_name": "HBoxModel",
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "state": {
+        "_dom_classes": [],
+        "children": [
+          "IPY_MODEL_f4c7657502554b7c98d20d82bb440bd7",
+          "IPY_MODEL_83aa2d0572a24f1ba0a27215ac6d2189",
+          "IPY_MODEL_1399d27bf9d3445e956fb0eb400ba0a5",
+          "IPY_MODEL_ccab6ba76b714115a877077f56ab71b8"
+        ],
+        "layout": "IPY_MODEL_af8f669b47c949d18d5a45e503efe297"
+      }
+    },
+    "9777c7e40df0481f8533f6ccaa79d81b": {
+      "model_name": "LeafletLayersControlModel",
+      "model_module": "jupyter-leaflet",
+      "model_module_version": "^0.19",
+      "state": {
+        "options": [
+          "collapsed",
+          "position"
+        ],
+        "position": "topright"
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "330bd602051c45fc9f7652478e097dff"}
+</script>
+
+</body>
+</html>
