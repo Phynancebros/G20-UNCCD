@@ -3,6 +3,12 @@ import csv
 import sys
 
 def read_dbf(file_path):
+    """
+    Reads a DBF file and saves its contents to a CSV file.
+    
+    Parameters:
+    - file_path: Path to the DBF file.
+    """
     try:
         table = DBF(file_path, encoding='latin1')
         csv_path = file_path.replace('.dbf', '.csv')

@@ -2,6 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def visualize_data(csv_path):
+    """
+    Visualizes data from a CSV file by generating bar charts.
+    
+    Parameters:
+    - csv_path: Path to the CSV file.
+    """
     try:
         df = pd.read_csv(csv_path)
         

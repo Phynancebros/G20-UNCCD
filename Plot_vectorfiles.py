@@ -6,6 +6,14 @@ import numpy as np
 import os
 
 def generate_uniform_raster(tiff_path, output_path, fill_value=1):
+    """
+    Generates a uniform raster with a specified fill value.
+    
+    Parameters:
+    - tiff_path: Path to the input TIFF file.
+    - output_path: Path to save the output uniform raster.
+    - fill_value: Value to fill the raster where data is defined.
+    """
     with rasterio.open(tiff_path) as src:
         img = src.read(1)
 
@@ -20,6 +28,14 @@ def generate_uniform_raster(tiff_path, output_path, fill_value=1):
             dst.write(uniform_data, 1)
 
 def plot_shapefiles_with_existing_outline(shp_folder_path, outline_raster_path, output_folder):
+    """
+    Plots shapefiles with an existing outline raster.
+    
+    Parameters:
+    - shp_folder_path: Path to the folder containing shapefiles.
+    - outline_raster_path: Path to the outline raster file.
+    - output_folder: Folder to save the output plots.
+    """
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
@@ -32,47 +48,48 @@ def plot_shapefiles_with_existing_outline(shp_folder_path, outline_raster_path, 
     for shp_file in shp_files:
         fig, ax = plt.subplots(figsize=(12, 12))
 
-        # Apri il raster outline
+        # Open the outline raster
         with rasterio.open(outline_raster_path) as src:
             rasterio.plot.show(src, ax=ax, cmap='gray', alpha=0.5)
 
-        # Leggi shapefile
+        # Read shapefile
         gdf = gpd.read_file(shp_file)
 
-        # Converti CRS dello shapefile al CRS del raster
+        # Convert shapefile CRS to raster CRS
         if gdf.crs != raster_crs:
             gdf = gdf.to_crs(raster_crs)
 
-        # Plot dello shapefile con distinzione se disponibile
+        # Plot shapefile with distinction if available
         if 'TYPE' in gdf.columns:
             gdf.plot(column='TYPE', ax=ax, linewidth=1.2, legend=True, cmap='Set2', alpha=0.7)
         else:
             gdf.plot(ax=ax, linewidth=1.2, edgecolor='blue', alpha=0.7)
 
-        # Limita gli assi al raster (per chiarezza e corretta posizione geografica)
+        # Limit axes to raster extent (for clarity and correct geographic positioning)
         ax.set_xlim([raster_extent[0], raster_extent[1]])
         ax.set_ylim([raster_extent[2], raster_extent[3]])
 
         filename = os.path.splitext(os.path.basename(shp_file))[0]
 
-        ax.set_title(f'Cartina - {filename}', fontsize=15)
+        ax.set_title(f'Map - {filename}', fontsize=15)
         ax.set_xlabel('X Coordinate')
         ax.set_ylabel('Y Coordinate')
         ax.grid(False)
 
-        output_path = os.path.join(output_folder, f"cartina_{filename}.png")
+        output_path = os.path.join(output_folder, f"map_{filename}.png")
         plt.savefig(output_path, bbox_inches='tight', dpi=300)
         plt.close(fig)
 
-# Esempio di utilizzo
+# Example usage
 shp_folder_path = 'Datasets_Hackathon/Streamwater_Line_Road_Network'
 raster_file = 'Datasets_Hackathon/Modis_Land_Cover_Data/2010LCT.tif'
 output_maps_folder = 'mappe_output'
-outline_path = output_maps_folder+'/outline_raster.tif'
-Admin_layers_path = "Datasets_Hackathon/Admin_layers"
-# Genera raster uniforme
+outline_path = os.path.join(output_maps_folder, 'outline_raster.tif')
+admin_layers_path = "Datasets_Hackathon/Admin_layers"
+
+# Generate uniform raster
 generate_uniform_raster(raster_file, outline_path)
 
-# Plotta e salva ogni shapefile separatamente
+# Plot and save each shapefile separately
 plot_shapefiles_with_existing_outline(shp_folder_path, outline_path, output_maps_folder)
-plot_shapefiles_with_existing_outline(Admin_layers_path, outline_path, output_maps_folder)
+plot_shapefiles_with_existing_outline(admin_layers_path, outline_path, output_maps_folder)
