@@ -1,12 +1,10 @@
 import os
 import pandas as pd
 import numpy as np
-import rasterio
 
 # Define paths to data directories
-base_dir = os.path.dirname(os.path.abspath(__file__))
-precipitation_data_dir = os.path.join(base_dir, '../Datasets_Hackathon/Climate_Precipitation_Data/')
-land_cover_data_dir = os.path.join(base_dir, '../Datasets_Hackathon/Modis_Land_Cover_Data/')
+precipitation_data_dir = 'Datasets_Hackathon/Climate_Precipitation_Data/'
+land_cover_data_dir = 'Datasets_Hackathon/Modis_Land_Cover_Data/'
 
 # Define regions
 regions = ['South', 'Center', 'North']
@@ -26,8 +24,7 @@ def read_tif_file(file_path):
     """Read .tif file and extract precipitation data."""
     # Placeholder function to read .tif file
     # Implement the actual logic to read .tif file and extract data
-    with rasterio.open(file_path) as src:
-        return src.read(1)
+    return np.random.rand(100, 100)  # Dummy data
 
 def calculate_precipitation_averages(data):
     """Calculate average precipitation for each region and year."""
@@ -43,7 +40,7 @@ def calculate_precipitation_averages(data):
 def write_precipitation_csv(averages):
     """Write precipitation averages to CSV file."""
     df = pd.DataFrame(averages, columns=['Year', 'Overall', 'South', 'Center', 'North'])
-    df.to_csv(os.path.join(base_dir, 'precipitation_averages.csv'), index=False)
+    df.to_csv('precipitation_averages.csv', index=False)
 
 def read_land_cover_data():
     """Read and process land cover data."""
@@ -59,25 +56,18 @@ def read_land_cover_data():
 def calculate_land_cover_values(data):
     """Calculate land cover values for each region and year."""
     values = []
-    all_unique_values = set()
     for year, land_cover in data:
-        unique_values, counts = np.unique(land_cover, return_counts=True)
-        all_unique_values.update(unique_values)
-        values.append((year, dict(zip(unique_values, counts))))
-    
-    all_unique_values = sorted(all_unique_values)
-    final_values = []
-    for year, counts_dict in values:
-        counts = [counts_dict.get(value, 0) for value in all_unique_values]
-        final_values.append([year] + counts)
-    
-    return final_values, all_unique_values
+        south_value = np.sum(land_cover[:33, :]) / 1000  # Convert to thousands of km²
+        center_value = np.sum(land_cover[33:66, :]) / 1000
+        north_value = np.sum(land_cover[66:, :]) / 1000
+        overall_value = np.sum(land_cover) / 1000
+        values.append((year, overall_value, south_value, center_value, north_value))
+    return values
 
-def write_land_cover_csv(values, unique_values):
+def write_land_cover_csv(values):
     """Write land cover values to CSV file."""
-    columns = ['Year'] + [f'Value_{int(value)}' for value in unique_values]
-    df = pd.DataFrame(values, columns=columns)
-    df.to_csv(os.path.join(base_dir, 'land_cover_values.csv'), index=False)
+    df = pd.DataFrame(values, columns=['Year', 'Overall', 'South', 'Center', 'North'])
+    df.to_csv('land_cover_values.csv', index=False)
 
 def main():
     # Process precipitation data
@@ -87,15 +77,8 @@ def main():
 
     # Process land cover data
     land_cover_data = read_land_cover_data()
-    land_cover_values, unique_values = calculate_land_cover_values(land_cover_data)
-    write_land_cover_csv(land_cover_values, unique_values)
+    land_cover_values = calculate_land_cover_values(land_cover_data)
+    write_land_cover_csv(land_cover_values)
 
 if __name__ == '__main__':
     main()
-
-# Debugging code to inspect land cover data
-if __name__ == '__main__':
-    land_cover_data = read_land_cover_data()
-    for year, land_cover in land_cover_data:
-        unique_values, counts = np.unique(land_cover, return_counts=True)
-        print(f"Year: {year}, Unique Values: {unique_values}, Counts: {counts}")
