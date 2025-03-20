@@ -54,6 +54,9 @@ def process_nasa_power_data(data, param_list):
 
 
 def main():
+    """
+    Main function to fetch and process NASA POWER data.
+    """
     # Representative coordinates for the Sahel region (adjust as needed)
     lat = 15
     lon = 10
